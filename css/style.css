@@ -4,3 +4,10 @@
 .modal-body{
     padding: 20px 20px;
 }
+.back{
+    background-color:rgb(255, 211, 101);
+}
+
+.container{
+    padding-top: 40px;
+}
