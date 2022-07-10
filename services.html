@@ -20,16 +20,16 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="staff/index.html">Events</a>
+                    <a class="nav-link active" aria-current="page" href="index.html">Events</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="staff/services.html">Services</a>
+                    <a class="nav-link" href="services.html">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="staff/personalstaff.html">Personal Staff</a>
+                    <a class="nav-link" href="personalstaff.html">Personal Staff</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="staff/eventplanner.html">Event Planner</a>
+                    <a class="nav-link" href="eventplanner.html">Event Planner</a>
                 </li>
             </ul>
             <form class="d-flex" role="search">
@@ -42,10 +42,10 @@
 
 <body class="back">
     <div class="container">
-        <h1>Events</h1>
+        <h1>Services</h1>
         <div class="action-menu">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                Add Personal Staff <i class="fa-light fa-address-card"></i>
+                Add Service<i class="fa-light fa-address-card"></i>
             </button>
         </div>
 
@@ -53,10 +53,10 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Name</th>
                     <th scope="col">Service</th>
-                    <th scope="col">Specific</th>
-                    <th scope="col">Job Radio</th>
+                    <th scope="col">Event Type</th>
+                    <th scope="col">Capacity</th>
+                    <th scope="col">Price</th>
                     <th scope="col"></th>
                 </tr>
             </thead>
@@ -69,7 +69,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Form Staff</h5>
+                        <h5 class="modal-title" id="staticBackdropLabel">Form Service</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -77,21 +77,26 @@
                         <div class="mb-3">
                             <form id="form">
                                 <input type="hidden" id="indice"/>
-                                <label for="exampleFormControlInput1" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="name">
-                                <label for="exampleFormControlTextarea1" class="form-label">Service</label>
-                                <input class="form-control" id="service" placeholder="add your service type"></input>
-                                <label for="exampleFormControlTextarea1" class="form-label">Specific</label>
-                                <input class="form-control" id="specific" placeholder="add your role"></input>
-                                <label for="so">Job Radio</label> <br />
-                                <select class="form-control" id="radio" name="so" placeholder="selected">
-                                    <option value="bello">Bello</option>
-                                    <option value="copacabana">Copacabana</option>
-                                    <option value="envigado">Envigado</option>
-                                    <option value="girardota">Girardota</option>
-                                    <option value="medellin">Medellín</option>
-                                    <option value="itagui">Itagüí</option>
+                                <label for="exampleFormControlInput1" class="form-label">Service</label>
+                                <input type="text" class="form-control" id="service" placeholder="name">
+                                <label for="so">Type of Service</label> <br />
+                                <select class="form-control" id="type" name="so" placeholder="selected">
+                                    <option value="Corporative">Corporative</option>
+                                    <option value="Social">Social</option>
+                                    <option value="Party">Party</option>
+                                    <option value="Institutional">Institutional</option>
                                 </select>
+                                <label for="so">People Capacity</label> <br />
+                                <select class="form-control" id="capacity" name="so" placeholder="selected">
+                                    <option value="15-30">15-30</option>
+                                    <option value="30-60">30-60</option>
+                                    <option value="50-100">50-100</option>
+                                    <option value="100-500">100-500</option>
+                                    <option value="500-1000">500-1000</option>
+                                    <option value="1000<">1000<</option>
+                                </select>
+                                 <label for="so">Price</label> <br />
+                                <input class="form-control" name="price" id="price" placeholder="Price in dollars" type="number">
                             </form>
                         </div>
                     </div>
