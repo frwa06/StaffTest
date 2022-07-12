@@ -25,6 +25,16 @@ module.exports = {
         }
         callback(400,{message: "index no sent"});
         },
+        DELETE:(data, callback)=>{if(typeof data.indice !== "undefined"){
+            if(global.resources.events[data.indice])
+            {   global.resources.events = global.resources.events.filter(
+                (_events, indice)=>indice != data.indice);
+                return callback(204,{message:`Element with index ${data.indice} delete`})}
+            return callback(404, {message:`Event with index ${data.indice} no found`})
+        }
+        callback(400,{message: "index no sent"});
+        },
+
         noFound: (data, callback)=>{
         callback(404,{message: 'no found'})}}
 }
