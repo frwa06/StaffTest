@@ -17,8 +17,12 @@ module.exports = function scheduledEventHandler(scheduledEvent){
     ,
     PUT:(data, callback)=>
     {if(typeof data.indice !== "undefined"){
-        if(scheduledEvent[data.indice])
-        {   scheduledEvent[data.indice] = data.payload;
+        if(scheduledEvent[data.indice]){
+            let {dateEvent} = scheduledEvent[data.indice];
+            scheduledEvent[data.indice] = {
+                ...data.payload,
+                dateEvent,
+                editDateEvent:new Date()};
             return callback(200,scheduledEvent[data.indice])}
         return callback(404, {message:`scheduledEvent with index ${data.indice} no found`})
     }
